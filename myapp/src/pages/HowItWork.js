@@ -23,3 +23,4 @@ function howItWork(props) {
         </div>
     )
 }
+export default howItWork;
