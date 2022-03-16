@@ -1,6 +1,6 @@
 import React from "react";
-import LoginInput from "./LoginPage/LoginInput";
-import KeepLoginCheckBox from "./LoginPage/KeepLoginCheckBox";
+import LoginInput from "./Login/LoginInput";
+import KeepLoginCheckBox from "./Login/KeepLoginCheckBox";
 import Link from "./general/Link";
 import MyButton from "./general/MyButton";
 
