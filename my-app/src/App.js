@@ -4,6 +4,7 @@ import LoginPage from './components/LoginPage';
 import Checklist from './components/general/Checklist';
 import {BrowserRouter as Router, Routes, Switch, Route, Outlet} from 'react-router-dom'
 import NavBar from './components/general/NavBar';
+import MyButton from './components/general/MyButton';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>  
           <Route path='/login' element={<LoginPage></LoginPage>}></Route>
         </Routes>
+        <MyButton name='Add a plant'/>
       </div>
     </Router>
     
