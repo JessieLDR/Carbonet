@@ -1,8 +1,8 @@
 import React from "react";
-import LoginInput from "./Login/LoginInput";
-import KeepLoginCheckBox from "./Login/KeepLoginCheckBox";
-import Link from "./general/Link";
-import MyButton from "./general/MyButton";
+import LoginInput from "./../Login/LoginInput"
+import KeepLoginCheckBox from "./../Login/KeepLoginCheckBox";
+import Link from "./../general/Link";
+import MyButton from "./../general/MyButton";
 
 function LoginPage(props){
     return(
