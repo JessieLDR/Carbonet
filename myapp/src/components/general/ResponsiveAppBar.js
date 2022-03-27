@@ -42,7 +42,7 @@ const ResponsiveAppBar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            sx={{ mr: 1000, display: { xs: 'none', md: 'flex' } }}
           >
             LOGO
           </Typography>

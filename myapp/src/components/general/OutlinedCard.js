@@ -25,7 +25,7 @@ const card = (props) => {
   return (
   <React.Fragment>
     <CardContent>
-      <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+      <Typography sx={{ fontSize: 14}} color="text.secondary" gutterBottom>
         {status}
       </Typography>
       <Typography sx={{ mb: 1.5 }} color="text.secondary">

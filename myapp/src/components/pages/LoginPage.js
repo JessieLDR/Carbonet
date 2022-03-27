@@ -2,7 +2,6 @@ import React from "react";
 import LoginInput from "./../Login/LoginInput"
 import KeepLoginCheckBox from "./../Login/KeepLoginCheckBox";
 import Link from "./../general/Link";
-import MyButton from "./../general/MyButton";
 
 function LoginPage(props){
     return(
@@ -13,7 +12,6 @@ function LoginPage(props){
                     <LoginInput></LoginInput>        
                     <KeepLoginCheckBox />
                     <Link text="Forgot your password?" link="placeholder"></Link>
-                    <MyButton name="Login"></MyButton>
                 </div>
     )
 }
