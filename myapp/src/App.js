@@ -33,8 +33,8 @@ function App() {
         <Grid container spacing={20} justify="center">
           <div className="left">
             <filter></filter>
-            <Post sx={{ padding: 10, margin: 5}} ></Post>
-            {/* <Post sx={{ padding: 10, margin: 5}} ></Post> */}
+            <Post></Post>
+            <Post></Post>
           </div>
         </Grid>
     </div>
