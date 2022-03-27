@@ -48,6 +48,10 @@ function CommunityPost(props) {
   fscelerisque. Netus nisl nulla placerat dignissim ipsum arcu.
   </p>
 </div>
+
+<div className="profile">
+  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+</div>
 </div>
     )
 }
