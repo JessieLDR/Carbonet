@@ -2,6 +2,7 @@ import React from "react";
 import OutlinedCard from "../general/OutlinedCard";
 
 const PlantList = (props) => {
+    
     const output = props.plants.map(element => {
         return(
             <OutlinedCard 
