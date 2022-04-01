@@ -13,6 +13,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 import blog from "../images/blog.png";
 import profile from "../images/profile.png";
+import { Box } from '@mui/material';
 
 
 const ExpandMore = styled((props) => {
@@ -34,7 +35,8 @@ export default function RecipeReviewCard() {
   };
 
   return (
-    <Card sx={{ maxWidth: 800, spacing: 20}}>
+    <Box sx={{margin: 5}}>
+    <Card sx={{ maxWidth: 800}}>
       <CardHeader
         avatar={
           <Avatar src = {profile} sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -64,5 +66,6 @@ export default function RecipeReviewCard() {
         </IconButton>
       </CardActions>
     </Card>
+    </Box>
   );
 }
