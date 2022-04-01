@@ -1,58 +1,48 @@
+import React from 'react';
+import profile from "../images/profile.png";
+import Avatar from '@mui/material/Avatar';
+import ins from "../images/instagram.png";
+import fb from "../images/facebook.png";
+import Post from "../components/Post.js";
+import Grid from '@mui/material/Grid';
+
 function CommunityPost(props) {
     return (
-        // card
-<div className="card">
-    <div className="header">
-    <h2>Community</h2>
-    <p>How it works</p>
-    <p>About us</p>
-    </div>
-{/* blog card */}
-<div className="blog-post-hero blog-post-hero--short">
-  <img className="blogPhoto" src={blog}></img>
-</div>
-<div className="blog__title blog__title--small">
-  <h2>Event Partner Finder</h2>
-</div>
-<div className="blog__author">
-  <p className="authorName">
-  @Golanginya
-  </p>
-  <p className="blog__author-title">12 November 2020 19:35</p>
-</div>
-
-<div className="blog-content"> 
-  <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-  Ornare rutrum amet, a nunc mi lacinia in iaculis. 
-  Pharetra ut integer nibh urna. Placerat ut adipiscing nulla lectus vulputate massa, 
-  fscelerisque. Netus nisl nulla placerat dignissim ipsum arcu.
-  </p>
-</div>
-<div className="blog__read-more">
-  <a>Read More</a>
-</div>
-
-<div className="line"></div>
-<div className="blog__author">
-  <p className="authorName">
-  @unkind
-  </p>
-  <p className="blog__author-title">12 November 2020 19:35</p>
-</div>
-<div className="blog-content"> 
-  <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-  Ornare rutrum amet, a nunc mi lacinia in iaculis. 
-  Pharetra ut integer nibh urna. Placerat ut adipiscing nulla lectus vulputate massa, 
-  fscelerisque. Netus nisl nulla placerat dignissim ipsum arcu.
-  </p>
-</div>
-
-<div className="profile">
-  <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-</div>
-</div>
+      <div>
+      <div>
+        <div className="header">
+            <h2 className="community">Community</h2>
+            <div className="how
+          ">How it works</div>
+            <div className="about">About us</div>
+        </div>
+        {/* blog card */}
+        <div className="content">
+        <div style={{ padding: 40 }} >
+            <Grid container spacing={20} justify="center">
+              <div className="left">
+                <filter></filter>
+                <Post sx={{ padding: 10}} ></Post>
+                <Post sx={{ padding: 10}} ></Post>
+              </div>
+            </Grid>
+        </div>
+          <div className="profile">
+                <Avatar 
+                alt="Golanginya" 
+                src={profile} 
+                sx={ {width: 200, height: 200}}
+                />
+                <p>@Golanginya</p>
+                <div className="linkMedia">
+                <img className="blogPhoto" src={ins}></img>
+                <img className="blogPhoto" src={fb}></img>
+                </div>
+    
+          </div>
+        </div>
+      </div>
+      </div> 
     )
 }
 
