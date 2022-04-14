@@ -1,6 +1,7 @@
 import PlantList from "./PlantList"
 import { useState } from "react"
 import { Button } from "react-bootstrap"
+import { Box } from "@mui/system"
 
 var plant = [
     {'name': 'apple', 'status': 'in progress', 'emission': 90, 'progress': 10},
@@ -15,15 +16,16 @@ var plant2 = [
   ]
   
 const PlantsPage = () => {
-    const [myPlants, setMyPlants] = useState([])
+    const [myPlants, setMyPlants] = useState(plant)
     function updatePlantList(){
         setMyPlants(plant2)
         console.log(myPlants)
     }
     return(
         <div>
-            <PlantList plants={myPlants} />
-            <Button variant="primary" size="lg" onClick={updatePlantList}>Add a plant</Button>
+                <PlantList plants={myPlants} />
+                <Button variant="primary" size="lg" onClick={updatePlantList}>Add a plant</Button>
+            
         </div>
     )
 }

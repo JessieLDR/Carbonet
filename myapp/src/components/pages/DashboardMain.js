@@ -23,16 +23,17 @@ const DashboardMain = () => {
         <Router>
           <div className="App">
           <Nav></Nav>
-          <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', alignContent: 'space-between' }}>
-            <Box sx={{ width: '10%' }}>Content</Box>
-            <Box sx={{ width: '60%' }}>
+          <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', alignContent: 'space-between',
+                  }}>
+            <Box sx={{ width: '10%', minHeight:'600px', maxHeight:'1000px'}}>Content</Box>
+            <Box sx={{ width: '60%', minHeight:'600px', maxHeight:'1000px'}}>
               <Outlet />
               <Routes>  
                 <Route path='/login' element={<LoginPage></LoginPage>}></Route>
                 <Route path='/' element={<PlantsPage></PlantsPage>}></Route>
               </Routes>
             </Box >
-            <Box sx={{ width: '30%' }}>
+            <Box sx={{ width: '30%', minHeight:'600px', maxHeight:'1000px'}}>
               <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <Box sx={{ height: '50%', width:'100%', border:1}}>
                     <CheckList tasks={taskSample} />

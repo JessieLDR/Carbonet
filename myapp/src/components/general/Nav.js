@@ -5,8 +5,8 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from "react-router-dom";
+import { purple, red } from '@mui/material/colors';
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
@@ -45,16 +45,21 @@ export default function Nav(props) {
         let path = `/`
         navigate(path)
     }
+  const primary = red[500];
 
   return (
     <Box sx={{ flexGrow: 1, mb: 0.5 }}>
-      <AppBar position="static">
+      <AppBar position="static" style={{backgroundColor: 'white'}}>
         <Toolbar>
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            fontFamily='Open Sans'
+            fontSize={38}
+            fontWeight='bold'
+            style={{color:'#7C8C64'}}
           >
             Carbonet
           </Typography>
@@ -63,6 +68,9 @@ export default function Nav(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             onClick={navBack}
+            fontFamily='Open Sans'
+            fontSize={24}
+            style={{color:'#7C8C64'}}
           >
             Dashboard
           </Typography>
@@ -71,6 +79,9 @@ export default function Nav(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             onClick={navLogin}
+            fontFamily='Open Sans'
+            fontSize={24}
+            style={{color:'#7C8C64'}}
           >
             How it works
           </Typography>
@@ -79,6 +90,9 @@ export default function Nav(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             onClick={navBack}
+            fontFamily='Open Sans'
+            fontSize={24}
+            style={{color:'#7C8C64'}}
           >
             About Us
           </Typography>
