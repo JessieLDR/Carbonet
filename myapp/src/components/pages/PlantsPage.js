@@ -1,32 +1,50 @@
 import PlantList from "./PlantList"
 import { useState } from "react"
-import { Button } from "react-bootstrap"
 import { Box } from "@mui/system"
+import DidYouKnow from "../general/DidYouKnow";
+import CheckList from "../general/Check";
+import PlantOptionsHook from "../hooks/PlantOptionsHook";
+import PlantListHook from "../hooks/PlantListHook";
+import PlantDialog from "../general/PlantDialog";
 
-var plant = [
-    {'name': 'apple', 'status': 'in progress', 'emission': 90, 'progress': 10},
-    {'name': 'banana', 'status': 'in progress', 'emission': 40, 'progress': 20},
-    {'name': 'grape', 'status': 'in progress', 'emission': 30, 'progress': 60}
-  ]
-
-var plant2 = [
-    {'name': 'grape', 'status': 'in progress', 'emission': 90, 'progress': 10},
-    {'name': 'pumpkin', 'status': 'in progress', 'emission': 40, 'progress': 20},
-    {'name': 'watermelon', 'status': 'in progress', 'emission': 30, 'progress': 60}
-  ]
+const didyouknowsample = {
+    'title': "This is a title",
+    'body': "dmoafjdkalmklmfakdkf  naflkdnfkajdnfkandfnadlfnaldk f dnfakldnklfamdklfnadlk flk dfkdmfkdak"
+  }
   
+  const taskSample = [
+    {'name': 'water'},
+    {'name': 'b'},
+    {'name': 'c'},
+    {'name': 'd'}
+  ]
+
 const PlantsPage = () => {
-    const [myPlants, setMyPlants] = useState(plant)
-    function updatePlantList(){
-        setMyPlants(plant2)
-        console.log(myPlants)
-    }
+    const {myOptions, setMyOptions} = PlantOptionsHook()
+    const {myPlants, setMyPlants} = PlantListHook()
+    const [myTitle, setMyTitle] = useState(didyouknowsample.title)
+    const [myBody, setMyBody] = useState(didyouknowsample.body)
     return(
-        <div>
-                <PlantList plants={myPlants} />
-                <Button variant="primary" size="lg" onClick={updatePlantList}>Add a plant</Button>
-            
-        </div>
+        <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', alignContent: 'space-between',}}>
+            <Box sx={{ width: '66%', minHeight:'600px', maxHeight:'1000px'}}>
+                <PlantList plants={myPlants} setMyPlants={setMyPlants}/>
+                <PlantDialog myOptions={myOptions} myPlants={myPlants} 
+                setMyOptions={setMyOptions} setMyPlants={setMyPlants}/>
+            </Box>
+            <Box sx={{ width: '33%', minHeight:'600px', maxHeight:'1000px'}}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <Box sx={{ height: '50%', width:'100%', border:1}}>
+                        <CheckList tasks={taskSample} />
+                    </Box>
+                    <Box sx={{ height: '50%', mt:'50px'}}>
+                    <DidYouKnow 
+                        title={myTitle}
+                        body={myBody}
+                    />
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
     )
 }
 

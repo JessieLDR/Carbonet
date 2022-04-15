@@ -1,0 +1,22 @@
+{
+    "fact one": {
+        "title": "80 PERCENT OF THE EARTH’S ORIGINAL FORESTS HAVE BEEN CLEARED OR DESTROYED.",
+        "desc": "The same forests that dominated the land 8,000 years ago are all but gone. Approximately four-fifths of the forests are gone thanks to human intervention"
+    },
+    "fact two": {
+        "title": "NUTRITION DOESN’T FACTOR INTO THE CROPS WE DO MASS PRODUCE.",
+        "desc": "The world’s largest farmers have pursued certain crops because they can grow a lot of them more quickly, easily and inexpensively to turn a better profit. As a result, most of the most healthful plants stay off of our dinner plates because they aren’t available at grocery stores."
+    },
+    "fact three": {
+        "title": "THE EARTH HAS MORE THAN 80,000 SPECIES OF EDIBLE PLANTS.",
+        "desc": "If you’re ever in the mood to try something new, the good news is that there is certainly food you haven’t tasted yet growing somewhere in the world."
+    },
+    "fact four": {
+        "title": "90 PERCENT OF THE FOODS HUMANS EAT COME FROM JUST 30 PLANTS.",
+        "desc": "Out of tens of thousands of plants, we could eat, mankind chooses to consume only about 30. It’s crazy to contemplate how limited our diets are compared to all of the different foods we could be eating."
+    },
+    "fact five": {
+        "title": "70,000 PLANT SPECIES ARE UTILIZED FOR MEDICINE.",
+        "desc": "As it turns out, humans are more diversified in the plants we use for medicine. Although a large portion of that figure applies to traditional medicine, modern medicine is not exempt from plant help."
+    }
+}

@@ -6,10 +6,9 @@ const PlantList = (props) => {
     const output = props.plants.map(element => {
         return(
             <OutlinedCard
-                name={element.name}
-                status={element.status}
-                emission={element.emission}
-                progress={element.progress}
+                plant={element}
+                setMyPlants={props.setMyPlants}
+                myPlants={props.plants}
             ></OutlinedCard>
         )
     });

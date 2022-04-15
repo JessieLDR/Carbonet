@@ -1,12 +1,18 @@
-import React from 'react';
-import { Button } from 'bootstrap';
+import * as React from 'react';
+import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import { DialogContentText } from '@mui/material';
-import { DialogTitle } from '@mui/material';
+import DialogTitle from '@mui/material/DialogTitle';
+import PlantDialogList from './PlantDialogList';
+import { Box } from '@mui/system';
 
-export default function PlantDialog() {
+export default function PlantDialog(props) {
+  const myOptions = props.myOptions
+  const setMyOptions = props.setMyOptions
+  const myPlants = props.myPlants
+  const setMyPlants = props.setMyPlants
+  
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState('paper');
 
@@ -30,38 +36,23 @@ export default function PlantDialog() {
   }, [open]);
 
   return (
-    <div>
-        <Button onClick={handleClickOpen('paper')}>scroll=paper</Button>
-        <Button onClick={handleClickOpen('body')}>scroll=body</Button>
-        <Dialog
-            open={open}
-            onClose={handleClose}
-            scroll={scroll}
-            aria-labelledby="scroll-dialog-title"
-            aria-describedby="scroll-dialog-description"
-        >
-            <DialogTitle id="scroll-dialog-title">Subscribe</DialogTitle>
-            <DialogContent dividers={scroll === 'paper'}>
-            <DialogContentText
-                id="scroll-dialog-description"
-                ref={descriptionElementRef}
-                tabIndex={-1}
-            >
-                {[...new Array(50)]
-                .map(
-                    () => `Cras mattis consectetur purus sit amet fermentum.
-    Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-    Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-    Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-                )
-                .join('\n')}
-            </DialogContentText>
-            </DialogContent>
-            <DialogActions>
-            <Button onClick={handleClose}>Cancel</Button>
-            <Button onClick={handleClose}>Subscribe</Button>
-            </DialogActions>
-        </Dialog>
-    </div>
+    <Box>
+      <Button onClick={handleClickOpen('paper')}>Add plant</Button>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        scroll={scroll}
+        aria-labelledby="scroll-dialog-title"
+        aria-describedby="scroll-dialog-description"
+      >
+        <DialogTitle id="scroll-dialog-title">Add a plant</DialogTitle>
+        <DialogContent dividers={scroll === 'paper'}>
+          <PlantDialogList myOptions={myOptions} myPlants={myPlants} setMyOptions={setMyOptions} setMyPlants={setMyPlants}/>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Cancel</Button>
+        </DialogActions>
+      </Dialog>
+    </Box>
   );
 }

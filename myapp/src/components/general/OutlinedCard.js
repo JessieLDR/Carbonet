@@ -18,10 +18,18 @@ const bull = (
 );
 
 const card = (props) => {
-  const name = props.name
-  const status = props.status
-  const emission = props.emission
-  const progress = props.progress
+  const name = props.plant.name
+  const status = props.plant.status
+  const progress = props.plant.progress
+  const id = props.plant.id
+  const myPlants = props.myPlants
+  const setMyPlants = props.setMyPlants
+
+  function deletePlant() {
+    const curPlant = myPlants.filter(element => element.id != id)
+    console.log(curPlant)
+    setMyPlants(curPlant)
+  }
   return (
   <React.Fragment>
     <CardContent>
@@ -31,15 +39,12 @@ const card = (props) => {
       <Typography sx={{ mb: 1.5 }} color="text.secondary">
         {name}
       </Typography>
-      <Typography variant="body2">
-        CO2 emission: {emission}
-      </Typography>
       <div>
        <ProgressBar now={progress} label={`${progress}%`}></ProgressBar>
       </div>
     </CardContent>
     <CardActions>
-      <Button size="small">Additional actions</Button>
+      <Button size="small" onClick={deletePlant}>Delete Plant</Button>
     </CardActions>
   </React.Fragment>
 )};
