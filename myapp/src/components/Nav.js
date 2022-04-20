@@ -52,9 +52,17 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Nav(props) {
   let navigate = useNavigate()
-    const navLogin = () => {
+    const navPost = () => {
         let path = `communityPost`
         navigate(path)
+    }
+    const howWork = () => {
+      let path = `/howItWorks`
+      navigate(path)
+    }
+    const about = () => {
+      let path = `/about`
+      navigate(path)
     }
     const navBack = () => {
         let path = `/`
@@ -85,7 +93,7 @@ export default function Nav(props) {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-            onClick={navLogin}
+            onClick={howWork}
           >
             How it works
           </Typography>
@@ -93,7 +101,7 @@ export default function Nav(props) {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-            onClick={navBack}
+            onClick={about}
           >
             About Us
           </Typography>
