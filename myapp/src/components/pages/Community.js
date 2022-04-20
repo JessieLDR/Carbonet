@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
-import Card from "../components/card.js";
+import Card from "../general/card";
 import { Pagination } from '@mui/material';
 import { Container } from '@mui/material';
 

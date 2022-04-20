@@ -3,8 +3,7 @@ import profile from "../images/profile.png";
 import Avatar from '@mui/material/Avatar';
 import ins from "../images/instagram.png";
 import fb from "../images/facebook.png";
-import Post from "../components/Post.js";
-import Grid from '@mui/material/Grid';
+import Post from "./CommunityPost";
 import { Box } from '@mui/system';
 
 function CommunityPost(props) {
