@@ -68,16 +68,25 @@ export default function Nav(props) {
         let path = `/`
         navigate(path)
     }
+    const navDashboard = () => {
+      let path= `/dashboard`
+      navigate(path)
+    }
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" style={{backgroundColor: 'white'}}>
         <Toolbar>
           <Typography
             variant="h6"
             noWrap
             component="div"
+            onClick={navBack}
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            fontFamily='Open Sans'
+            fontSize={38}
+            fontWeight='bold'
+            style={{color:'#7C8C64'}}
           >
             Carbonet
           </Typography>
@@ -85,7 +94,10 @@ export default function Nav(props) {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-            onClick={navBack}
+            onClick={navDashboard}
+            fontFamily='Open Sans'
+            fontSize={24}
+            style={{color:'#7C8C64'}}
           >
             Dashboard
           </Typography>
@@ -94,6 +106,9 @@ export default function Nav(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             onClick={howWork}
+            fontFamily='Open Sans'
+            fontSize={24}
+            style={{color:'#7C8C64'}}
           >
             How it works
           </Typography>
@@ -102,6 +117,9 @@ export default function Nav(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             onClick={about}
+            fontFamily='Open Sans'
+            fontSize={24}
+            style={{color:'#7C8C64'}}
           >
             About Us
           </Typography>

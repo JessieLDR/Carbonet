@@ -1,0 +1,91 @@
+{
+  "African Violet": {
+    "daily task": [
+      {
+        "name": "Watering",
+        "desc": "Once every day."
+      },
+      {
+        "name": "Sunlight",
+        "desc": "As much as Possible"
+      }
+    ],
+    "img": "img/African-Violet.jpg",
+    "soil type": "well-drained",
+    "shade tolerance": "partial",
+    "frost tolerance": "medium",
+    "growth period": 240
+  },
+
+  "Chrysanthemum": {
+    "daily task": [
+      {
+        "name": "Watering",
+        "desc": "Once every two days."
+      },
+      {
+        "name": "Sunlight",
+        "desc": "As much as Possible"
+      }
+    ],
+    "img": "img/Chrysanthemum.jpg",
+    "soil type": "high-organic",
+    "shade tolerance": "low",
+    "frost tolerance": "medium",
+    "growth period": 112
+  },
+
+  "Daffodil": {
+    "daily task": [
+      {
+        "name": "Watering",
+        "desc": "Twice every day."
+      },
+      {
+        "name": "Sunlight",
+        "desc": "As much as Possible"
+      }
+    ],
+    "img": "img/Daffodil.jpg",
+    "soil type": "well-drained",
+    "shade tolerance": "partial",
+    "frost tolerance": "low",
+    "growth period": 28
+  },
+
+  "Daylily-Purple-Mountain": {
+    "daily task": [
+      {
+        "name": "Watering",
+        "desc": "Once every day."
+      },
+      {
+        "name": "Sunlight",
+        "desc": "Full"
+      }
+    ],
+    "img": "img/Daylily-Purple-Mountain.jpg",
+    "soil type": "well-drained",
+    "shade tolerance": "partial",
+    "frost tolerance": "low",
+    "growth period": 60
+  },
+
+  "Geranium": {
+    "daily task": [
+      {
+        "name": "Watering",
+        "desc": "Twice every day."
+      },
+      {
+        "name": "Sunlight",
+        "desc": "Full"
+      }
+    ],
+    "img": "img/Geranium.jpg",
+    "soil type": "well-drained",
+    "shade tolerance": "partial",
+    "frost tolerance": "medium",
+    "growth period": 98
+  }
+}
