@@ -10,6 +10,7 @@ import HowItWorks from ".//components/pages/HowItWork";
 import About from ".//components/pages/About.js";
 import DashboardMain from "./components/pages/DashboardMain";
 import PlantsPage from "./components/pages/PlantsPage";
+import Landing2 from './/components/pages/Landing2';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Outlet />
           <Routes>  
             <Route path='/' element={<Landing></Landing>}/>
+            <Route path='/Landing2' element={<Landing2></Landing2>}/>
             <Route path='/communityPost' element={<CommunityPost></CommunityPost>}/>
             <Route path='/Community' element={<Community></Community>}/>
             <Route path='/howItWorks' element={<HowItWorks></HowItWorks>}/>
