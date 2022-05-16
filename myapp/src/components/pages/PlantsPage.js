@@ -7,6 +7,7 @@ import PlantDialog from "../general/PlantDialog";
 import PlantOptionsHook from "../hooks/PlantOptionsHook";
 import PlantListHook from "../hooks/PlantListHook";
 import DidYouKnowHook from "../hooks/DidYouKnowHook";
+import VerticalNavBar from "../general/VerticalNavBar";
 
 
 const didyouknowsample = {

@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from "react-router-dom";
+import zIndex from '@mui/material/styles/zIndex';
+import { makeStyles } from '@material-ui/core/styles'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -75,7 +77,9 @@ export default function Nav(props) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{backgroundColor: 'white'}}>
+      <AppBar position="relative" 
+      style={{backgroundColor: 'white'}}
+      position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
           <Typography
             variant="h6"

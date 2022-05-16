@@ -8,25 +8,15 @@ import './index.css'
 import ".//components/general/filter.js";
 import HowItWorks from ".//components/pages/HowItWork";
 import About from ".//components/pages/About.js";
-import DashboardMain from "./components/pages/DashboardMain";
 import PlantsPage from "./components/pages/PlantsPage";
-import Landing2 from './/components/pages/Landing2';
+import VerticalNavBar from "./components/general/VerticalNavBar";
+import ClippedDrawer from "./components/general/ClippedDrawer";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Nav></Nav>
-        <Outlet />
-          <Routes>  
-            <Route path='/' element={<Landing></Landing>}/>
-            <Route path='/Landing2' element={<Landing2></Landing2>}/>
-            <Route path='/communityPost' element={<CommunityPost></CommunityPost>}/>
-            <Route path='/Community' element={<Community></Community>}/>
-            <Route path='/howItWorks' element={<HowItWorks></HowItWorks>}/>
-            <Route path='/about' element={<About></About>}/>
-            <Route path='/Dashboard' element={<PlantsPage/>}></Route>
-          </Routes>
+        <ClippedDrawer></ClippedDrawer>
       </div>
     </Router>
   );
