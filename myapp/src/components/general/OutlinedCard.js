@@ -6,7 +6,9 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { ProgressBar } from 'react-bootstrap';
+import { spacing } from '@mui/system';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const bull = (
   <Box
@@ -25,6 +27,7 @@ const card = (props) => {
   const myPlants = props.myPlants
   const setMyPlants = props.setMyPlants
 
+
   function deletePlant() {
     const curPlant = myPlants.filter(element => element.id != id)
     console.log(curPlant)
@@ -32,27 +35,29 @@ const card = (props) => {
   }
   return (
   <React.Fragment>
-    <CardContent>
-      <Typography sx={{ fontSize: 14}} color="text.secondary" gutterBottom>
-        {status}
-      </Typography>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        {name}
-      </Typography>
-      <div>
-       <ProgressBar now={progress} label={`${progress}%`}></ProgressBar>
-      </div>
-    </CardContent>
-    <CardActions>
-      <Button size="small" onClick={deletePlant}>Delete Plant</Button>
-    </CardActions>
+    <Box sx={{ p: 2, border: '1px solid #83765F', borderBottom: 11, borderColor: '#7C8C64'}}>
+        <CardContent>
+          <Typography sx={{ fontSize: 14}} color="text.secondary" gutterBottom>
+            {status}
+          </Typography>
+          <Typography style={{ fontWeight: 600 }} sx={{ mb: 1.5 }} color="#7C8C64">
+            {name}
+          </Typography>
+          <div>
+           <ProgressBar variant="success" now={progress} label={`${progress}%`}></ProgressBar>
+          </div>
+        </CardContent>
+        <CardActions>
+          <Button size="small" onClick={deletePlant}>Delete Plant</Button>
+        </CardActions>
+    </Box>
   </React.Fragment>
 )};
 
 export default function OutlinedCard(props) {
   return (
-    <Box sx={{ maxHeight:300 }}>
-      <Card variant="outlined">{card(props)}</Card>
-    </Box>
+      <Box sx={{ p: 2, maxHeight:300 }}>
+          <Card variant="outlined">{card(props)}</Card>
+      </Box>
   );
 }

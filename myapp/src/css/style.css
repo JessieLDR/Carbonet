@@ -593,3 +593,14 @@ color: #777;
 .cursor{
 	cursor: pointer;
 }
+
+.producing-potable-wa {
+	letter-spacing: 0;
+	min-height: 187px;
+	width: 258px;
+}
+
+.progress-custom {
+	background-color: #F1EFE4;
+	color: #83765F;
+}

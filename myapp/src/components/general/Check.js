@@ -5,6 +5,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
+import {Box, Paper} from "@material-ui/core";
 
 export default function Check(props) {
   const tasks = props.tasks
@@ -24,30 +25,40 @@ export default function Check(props) {
   };
 
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-      {[0, 1, 2, 3].map((value) => {
-        const labelId = `checkbox-list-label-${value}`;
+    <List sx={{ width: '130%', maxWidth: 400, bgcolor: '#FCFBF6' }}>
+      <Box p={{ xs: 1, sm: 2, md: 4 }} sx={{ minWidth:445}}>
+        <Paper>
+          <Box color="#7C8C64" p={2} >
+            <h3>
+              <b>Daily Checklist</b>
+            </h3>
+            {[0, 1, 2, 3].map((value) => {
+              const labelId = `checkbox-list-label-${value}`;
 
-        return (
-          <ListItem
-            key={value}
-            disablePadding
-          >
-            <ListItemButton role={undefined} onClick={handleToggle(value)} dense>
-              <ListItemIcon>
-                <Checkbox
-                  edge="start"
-                  checked={checked.indexOf(value) !== -1}
-                  tabIndex={-1}
-                  disableRipple
-                  inputProps={{ 'aria-labelledby': labelId }}
-                />
-              </ListItemIcon>
-              <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
-            </ListItemButton>
-          </ListItem>
-        );
-      })}
+              return (
+
+                <ListItem
+                  key={value}
+                  disablePadding
+                >
+                  <ListItemButton role={undefined} onClick={handleToggle(value)} dense>
+                    <ListItemIcon>
+                      <Checkbox
+                        edge="start"
+                        checked={checked.indexOf(value) !== -1}
+                        tabIndex={-1}
+                        disableRipple
+                        inputProps={{ 'aria-labelledby': labelId }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
+                  </ListItemButton>
+                </ListItem>
+              );
+            })}
+          </Box>
+        </Paper>
+      </Box>
     </List>
   );
 }
