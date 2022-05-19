@@ -10,7 +10,7 @@
         "desc": "As much as Possible"
       }
     ],
-    "img": "img/African-Violet.jpg",
+    "img": "https://i.insider.com/61e6f2e17c6a2000184264dc?width=1000&format=jpeg&auto=webp",
     "soil type": "well-drained",
     "shade tolerance": "partial",
     "frost tolerance": "medium",
@@ -28,7 +28,7 @@
         "desc": "As much as Possible"
       }
     ],
-    "img": "img/Chrysanthemum.jpg",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Chrysanthemum_November_2007_Osaka_Japan.jpg",
     "soil type": "high-organic",
     "shade tolerance": "low",
     "frost tolerance": "medium",
@@ -46,7 +46,7 @@
         "desc": "As much as Possible"
       }
     ],
-    "img": "img/Daffodil.jpg",
+    "img": "https://www.almanac.com/sites/default/files/styles/max_2600x2600/public/image_nodes/daffodil.jpg?itok=c7j60AXV",
     "soil type": "well-drained",
     "shade tolerance": "partial",
     "frost tolerance": "low",
@@ -64,7 +64,7 @@
         "desc": "Full"
       }
     ],
-    "img": "img/Daylily-Purple-Mountain.jpg",
+    "img": "https://h2.commercev3.net/cdn.brecks.com/images/800/84655.jpg",
     "soil type": "well-drained",
     "shade tolerance": "partial",
     "frost tolerance": "low",
@@ -82,7 +82,7 @@
         "desc": "Full"
       }
     ],
-    "img": "img/Geranium.jpg",
+    "img": "https://www.calloways.com/wp-content/uploads/geranium-red-773401896.jpg",
     "soil type": "well-drained",
     "shade tolerance": "partial",
     "frost tolerance": "medium",

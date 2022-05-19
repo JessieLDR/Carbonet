@@ -26,6 +26,12 @@ const MoreCards = () => {
     },
 
     {image: "https://www.almanac.com/sites/default/files/styles/max_2600x2600/public/image_nodes/sunflower-1627193_1920.jpg?itok=3ncNl6ha",
+    title: "TTK_shaw", 
+    subheader: " April 1, 2022", 
+    content: "Has anyone tried using eggshell as a seedling planter? I saw this hack online and am hoping to try it out! "
+    },
+
+    {image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFZTj3Ufq4ymW4B1bELqOXgfO-6UpEGmo7_g&usqp=CAU",
     title: "Helena K.", 
     subheader: "April 3, 2022", 
     content: "Does anyone know what soil I should use to most effectively help reduce carbon emissions? "

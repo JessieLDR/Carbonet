@@ -10,7 +10,7 @@ const DashboardMain = () => {
         <Router>
           <div className="App">
           <Nav></Nav>
-          <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', alignContent: 'space-between',
+          <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', alignContent: 'space-between'
                   }}>
             <Box sx={{ width: '10%', minHeight:'600px', maxHeight:'1000px'}}>
               SideBarWIP

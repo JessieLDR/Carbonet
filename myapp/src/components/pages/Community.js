@@ -9,36 +9,24 @@ import { Pagination } from '@mui/material';
 import { Container } from '@mui/material';
 
 import { useNavigate } from 'react-router-dom';
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+import PostHeading from "../images/PostHeading.png";
 
 export default function ResponsiveGrid() {
   let navigate = useNavigate();
   return (
-    <div sx = {{maxHeight: 30}}>
+    <div>
+    <img src='PostHeading'></img>
     <Container maxWidth="md">
     <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={{ xs: 3, md: 3 }} columns={{ xs: 3, sm: 8, md: 12 }}>
-            {Array.from(Array(4)).map((_, index) => (
-            <Grid item xs={6} sm={6} md={6} key={index}>
-                <Item 
-                  onClick = {() => {
-                    navigate("/communityPost")
-                  }}
-                ><Card></Card></Item>
+        <Grid container spacing={{ xs: 4, md: 6 }} columns={{ xs: 3, sm: 4, md: 4 }}>
+            <Grid item xs={5} sm={10} md={10}>
+                <Card></Card>
             </Grid>
-            ))}
         </Grid>
     </Box>
     </Container>
     <Pagination sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-    count={10} size="large" />
+    count={3} size="large" />
     </div>
   );
 }
