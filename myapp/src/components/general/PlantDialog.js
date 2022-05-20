@@ -39,8 +39,8 @@ export default function PlantDialog(props) {
 
   return (
     <Box>
-      <Button onClick={handleClickOpen('paper')}>Add plant</Button>
-      <Dialog
+      <Button onClick={handleClickOpen('paper')} sx={{ ml: 150}}>Add plant</Button>
+      <Dialog 
         open={open}
         onClose={handleClose}
         scroll={scroll}

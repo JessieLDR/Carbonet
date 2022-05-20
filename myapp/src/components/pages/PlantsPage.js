@@ -66,10 +66,10 @@ const PlantsPage = () => {
 
                     </Box>
                     <Box >
-                        <PlantList plants={myPlants} setMyPlants={setMyPlants}
-                        dailyTask={dailyTask} setDailyTask={setDailyTask}/>
                         <PlantDialog myOptions={myOptions} myPlants={myPlants}
                         setMyOptions={setMyOptions} setMyPlants={setMyPlants}
+                        dailyTask={dailyTask} setDailyTask={setDailyTask}/>
+                        <PlantList plants={myPlants} setMyPlants={setMyPlants}
                         dailyTask={dailyTask} setDailyTask={setDailyTask}/>
                     </Box>
                 </Box>
