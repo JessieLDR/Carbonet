@@ -33,7 +33,7 @@ const card = (props) => {
     const delete_plant = myPlants.filter(element => element.id == id)[0]['name']
     var include = false
     curPlant.forEach(element => {
-      if (element.name == deletePlant){
+      if (element.name == delete_plant){
         include = true
         return
       }
@@ -44,9 +44,9 @@ const card = (props) => {
           return element
         }
       })
-
       setDailyTask(curTask)
     }
+    console.log(curPlant)
     setMyPlants(curPlant)
   }
   return (
