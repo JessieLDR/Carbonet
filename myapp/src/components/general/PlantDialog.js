@@ -39,7 +39,7 @@ export default function PlantDialog(props) {
 
   return (
     <Box>
-      <Button variant="contained" color="success" size="large" onClick={handleClickOpen('paper')} sx={{ ml: 60}}>Add plant</Button>
+      <Button variant="contained" color="success" size="large" onClick={handleClickOpen('paper')} sx={{ ml: 140}}>Add plant</Button>
       <Dialog 
         open={open}
         onClose={handleClose}
