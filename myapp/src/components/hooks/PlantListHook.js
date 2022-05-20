@@ -30,7 +30,7 @@ for (var key in raw_data){
 // console.log(plantList)
 
 const PlantListHook = () => {
-    const [myPlants, setMyPlants] = useState(plantList)
+    const [myPlants, setMyPlants] = useState([])
     return {myPlants, setMyPlants}
 }
 

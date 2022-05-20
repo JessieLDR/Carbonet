@@ -20,12 +20,13 @@ export default function PlantDialogListItem(props) {
   function update() {
     const target = myOptions.find(element => element.name == name)
     const uniqueId = uid()
+    console.log(target['img'])
     const newPlant = {
       'id': uniqueId,
       'name': name,
       'status': 'in progress',
       'progress': target['progress'],
-      'img_src': target['img']
+      'img_src': target['img_src']
     }
     setMyPlants(myPlants => [...myPlants, newPlant]);
     var include = false

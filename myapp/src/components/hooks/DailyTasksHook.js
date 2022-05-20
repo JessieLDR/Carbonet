@@ -19,7 +19,7 @@ const process_data = () => {
 
 const processed_data = process_data()
 const DailyTaskHook = () =>{
-    const [dailyTask, setDailyTask] = useState(processed_data)
+    const [dailyTask, setDailyTask] = useState([])
     return {dailyTask, setDailyTask}
 }
 
