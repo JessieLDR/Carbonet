@@ -16,8 +16,6 @@ function Landing(props) {
             <img className = 'middleRound' src={middleRound} />
             <img className = 'leftRound' src={lefRound} />
             <img className = 'rightRound' src={rightRound} />
-
-            <button className='start'>START NOW</button>
             <img className = 'butterfly' src={butterfly} width="100" height="50" />
             <img className = 'basket' src={basket} width="100" height="50" />
         </div>
