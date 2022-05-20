@@ -85,13 +85,14 @@ export default function Nav(props) {
       <AppBar position="relative" 
       style={{backgroundColor: 'white'}}
       position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
-        <Toolbar>
+        <Toolbar >
+          {/* <Box sx={{display: 'flex', justifyContent: 'space-between'}}> */}
           <Typography
             variant="h6"
             noWrap
             component="div"
             onClick={navBack}
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 9, display: { xs: 'none', sm: 'block' } }}
             fontFamily='Open Sans'
             fontSize={38}
             fontWeight='bold'
@@ -99,7 +100,7 @@ export default function Nav(props) {
           >
             Carbonet
           </Typography>
-          <Typography
+          {/* <Typography
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
@@ -131,7 +132,7 @@ export default function Nav(props) {
             style={{color:'#7C8C64'}}
           >
             About Us
-          </Typography>
+          </Typography> */}
           <Typography
             noWrap
             component="div"
@@ -143,6 +144,7 @@ export default function Nav(props) {
           >
             <MenuIcon />
           </Typography>
+        {/* </Box> */}
         </Toolbar>
       </AppBar>
     </Box>

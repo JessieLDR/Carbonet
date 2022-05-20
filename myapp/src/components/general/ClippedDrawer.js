@@ -21,6 +21,11 @@ import HowItWorks from '../pages/HowItWork';
 import About from '../pages/About';
 import PlantsPage from '../pages/PlantsPage';
 import { useState } from 'react';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
+import InfoIcon from '@mui/icons-material/Info';
+import ForumIcon from '@mui/icons-material/Forum';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 
 const drawerWidth = 240;
 
@@ -33,6 +38,25 @@ export default function ClippedDrawer() {
   let navigate = useNavigate()
   const handleCommunityClick = () => {
     let path = `/Community`
+    handleOpenToggle()
+    navigate(path)
+  }
+  const howWork = () => {
+    let path = `/howItWorks`
+    handleOpenToggle()
+    navigate(path)
+  }
+  const about = () => {
+    let path = `/about`
+    handleOpenToggle()
+    navigate(path)
+  }
+  const navBack = () => {
+      let path = `/`
+      navigate(path)
+  }
+  const navDashboard = () => {
+    let path= `/dashboard`
     handleOpenToggle()
     navigate(path)
   }
@@ -58,7 +82,7 @@ export default function ClippedDrawer() {
             <ListItem key={'Community'} disablePadding>
                 <ListItemButton onClick={handleCommunityClick}>
                   <ListItemIcon>
-                    <MailIcon />
+                    <ForumIcon />
                   </ListItemIcon>
                   <ListItemText primary={'Community'} />
                 </ListItemButton>
@@ -66,9 +90,33 @@ export default function ClippedDrawer() {
               <ListItem key={'Landing'} disablePadding>
                 <ListItemButton onClick={handleLandingClick}>
                   <ListItemIcon>
-                    <InboxIcon />
+                    <MenuBookIcon />
                   </ListItemIcon>
                   <ListItemText primary={'Landing'} />
+                </ListItemButton>
+              </ListItem>
+              <ListItem key={'Landing'} disablePadding>
+                <ListItemButton onClick={navDashboard}>
+                  <ListItemIcon>
+                    <DashboardIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={'Dashboard'} />
+                </ListItemButton>
+              </ListItem>
+              <ListItem key={'Landing'} disablePadding>
+                <ListItemButton onClick={about}>
+                  <ListItemIcon>
+                    <PrecisionManufacturingIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={'About Us'} />
+                </ListItemButton>
+              </ListItem>
+              <ListItem key={'Landing'} disablePadding>
+                <ListItemButton onClick={howWork}>
+                  <ListItemIcon>
+                    <InfoIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={'About Us'} />
                 </ListItemButton>
               </ListItem>
           </List>
