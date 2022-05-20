@@ -72,7 +72,7 @@ const card = (props) => {
           </div>
         </CardContent>
         <CardActions>
-          <Button size="small" onClick={deletePlant}>Delete Plant</Button>
+          <Button variant="outlined" color="success" size="small" onClick={deletePlant} >Delete</Button>
         </CardActions>
     </Box>
   </React.Fragment>
