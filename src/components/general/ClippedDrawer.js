@@ -79,28 +79,28 @@ export default function ClippedDrawer() {
         <Toolbar />
         <Box sx={{ overflow: 'auto' }}>
           <List>
+            <ListItem key={'Landing'} disablePadding>
+              <ListItemButton onClick={handleLandingClick}>
+                <ListItemIcon>
+                  <MenuBookIcon />
+                </ListItemIcon>
+                <ListItemText primary={'Home'} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem key={'Landing'} disablePadding>
+              <ListItemButton onClick={navDashboard}>
+                <ListItemIcon>
+                   <DashboardIcon />
+                </ListItemIcon>
+              <ListItemText primary={'Dashboard'} />
+              </ListItemButton>
+            </ListItem>
             <ListItem key={'Community'} disablePadding>
-                <ListItemButton onClick={handleCommunityClick}>
-                  <ListItemIcon>
+              <ListItemButton onClick={handleCommunityClick}>
+                <ListItemIcon>
                     <ForumIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={'Community'} />
-                </ListItemButton>
-              </ListItem>
-              <ListItem key={'Landing'} disablePadding>
-                <ListItemButton onClick={handleLandingClick}>
-                  <ListItemIcon>
-                    <MenuBookIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={'Landing'} />
-                </ListItemButton>
-              </ListItem>
-              <ListItem key={'Landing'} disablePadding>
-                <ListItemButton onClick={navDashboard}>
-                  <ListItemIcon>
-                    <DashboardIcon />
-                  </ListItemIcon>
-                  <ListItemText primary={'Dashboard'} />
+                </ListItemIcon>
+                <ListItemText primary={'Community'} />
                 </ListItemButton>
               </ListItem>
               <ListItem key={'Landing'} disablePadding>
@@ -116,7 +116,7 @@ export default function ClippedDrawer() {
                   <ListItemIcon>
                     <InfoIcon />
                   </ListItemIcon>
-                  <ListItemText primary={'About Us'} />
+                  <ListItemText primary={'How It Works'} />
                 </ListItemButton>
               </ListItem>
           </List>
