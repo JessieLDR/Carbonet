@@ -7,6 +7,7 @@ import PlantDialog from "../general/PlantDialog";
 import PlantOptionsHook from "../hooks/PlantOptionsHook";
 import PlantListHook from "../hooks/PlantListHook";
 import DidYouKnowHook from "../hooks/DidYouKnowHook";
+import DailyTaskHook from "../hooks/DailyTasksHook";
 import Grid from "@material-ui/core/Grid";
 import VerticalNavBar from "../general/VerticalNavBar";
 
@@ -29,7 +30,7 @@ const PlantsPage = () => {
     const [myTitle, setMyTitle] = useState(didyouknowsample.title)
     const [myBody, setMyBody] = useState(didyouknowsample.body)
     const {didYouKnow, setDidYouKnow} = DidYouKnowHook()
-    
+    const {dailyTask, setDailyTask} = DailyTaskHook()
 
     return(
         <Box sx={{ display: 'flex',
@@ -39,14 +40,16 @@ const PlantsPage = () => {
                 backgroundColor: "#FCFBF6",
             }}>
             <Box sx={{ width: '66%', minHeight:'600px', maxHeight:'1000px'}}>
-                <PlantList plants={myPlants} setMyPlants={setMyPlants}/>
+                <PlantList plants={myPlants} setMyPlants={setMyPlants}
+                dailyTask={dailyTask} setDailyTask={setDailyTask}/>
                 <PlantDialog myOptions={myOptions} myPlants={myPlants}
-                setMyOptions={setMyOptions} setMyPlants={setMyPlants}/>
+                setMyOptions={setMyOptions} setMyPlants={setMyPlants}
+                dailyTask={dailyTask} setDailyTask={setDailyTask}/>
             </Box>
             <Box sx={{ width: '33%', minHeight:'600px', maxHeight:'1000px'}}>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <Box sx={{ height: '90%', width:'100%'}}>
-                        <CheckList tasks={taskSample}/>
+                        <CheckList dailyTask={dailyTask}/>
                     </Box>
                     <Box sx={{ height: '10%', mt:'50px'}}>
                     <DidYouKnow 

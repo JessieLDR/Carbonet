@@ -7,8 +7,8 @@ import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import {Box, Paper} from "@material-ui/core";
 
-export default function Check(props) {
-  const tasks = props.tasks
+export default function CheckList(props) {
+  const dailyTask = props.dailyTask
   const [checked, setChecked] = React.useState([0]);
 
   const handleToggle = (value: number) => () => {
@@ -32,11 +32,9 @@ export default function Check(props) {
             <h3>
               <b>Daily Checklist</b>
             </h3>
-            {[0, 1, 2, 3].map((value) => {
+            {dailyTask.map((value) => {
               const labelId = `checkbox-list-label-${value}`;
-
               return (
-
                 <ListItem
                   key={value}
                   disablePadding
@@ -51,7 +49,7 @@ export default function Check(props) {
                         inputProps={{ 'aria-labelledby': labelId }}
                       />
                     </ListItemIcon>
-                    <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
+                    <ListItemText id={labelId} primary={value} />
                   </ListItemButton>
                 </ListItem>
               );

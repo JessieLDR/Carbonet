@@ -14,6 +14,8 @@ export default function PlantDialogListItem(props) {
   var myOptions = props.myOptions
   const name = props.name;
   const plant = myOptions.find(element => element.name == name)
+  var dailyTask = props.dailyTask
+  var setDailyTask = props.setDailyTask
 
   function update() {
     const target = myOptions.find(element => element.name == name)
@@ -26,7 +28,22 @@ export default function PlantDialogListItem(props) {
       'img_src': target['img']
     }
     setMyPlants(myPlants => [...myPlants, newPlant]);
-    console.log(myPlants)
+    var include = false
+    myPlants.forEach(element => {
+      if (element.name == name){
+        include = true
+        return
+      }
+    });
+    if (!include){
+      const tasks_raw = target['daily_task']
+        tasks_raw.forEach(element => {
+            const task_first = element['name']
+            const task_second = element['desc']
+            const task_full = name + ": " + task_first + " " + task_second
+            setDailyTask(dailyTask => [...dailyTask, task_full])
+        });
+    }
   }
   return (
     <Card sx={{maxWidth: 320, maxHeight: 200, mt: 1}}>

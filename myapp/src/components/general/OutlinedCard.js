@@ -6,7 +6,6 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { ProgressBar } from 'react-bootstrap';
-import { spacing } from '@mui/system';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -26,11 +25,28 @@ const card = (props) => {
   const id = props.plant.id
   const myPlants = props.myPlants
   const setMyPlants = props.setMyPlants
-
+  const dailyTask = props.dailyTask
+  const setDailyTask = props.setDailyTask
 
   function deletePlant() {
     const curPlant = myPlants.filter(element => element.id != id)
-    console.log(curPlant)
+    const delete_plant = myPlants.filter(element => element.id == id)[0]['name']
+    var include = false
+    curPlant.forEach(element => {
+      if (element.name == deletePlant){
+        include = true
+        return
+      }
+    });
+    if (!include) {
+      const curTask = dailyTask.filter(element => {
+        if (!element.includes(delete_plant)){
+          return element
+        }
+      })
+
+      setDailyTask(curTask)
+    }
     setMyPlants(curPlant)
   }
   return (

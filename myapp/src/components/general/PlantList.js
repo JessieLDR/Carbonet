@@ -9,6 +9,7 @@ const PlantList = (props) => {
                 plant={element}
                 setMyPlants={props.setMyPlants}
                 myPlants={props.plants}
+                dailyTask={props.dailyTask} setDailyTask={props.setDailyTask}
             ></OutlinedCard>
         )
     });

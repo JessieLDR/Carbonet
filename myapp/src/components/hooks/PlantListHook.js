@@ -27,7 +27,7 @@ for (var key in raw_data){
   plantList.push(element)
 }
 
-console.log(plantList)
+// console.log(plantList)
 
 const PlantListHook = () => {
     const [myPlants, setMyPlants] = useState(plantList)

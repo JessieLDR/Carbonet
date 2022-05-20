@@ -12,6 +12,8 @@ export default function PlantDialog(props) {
   const setMyOptions = props.setMyOptions
   const myPlants = props.myPlants
   const setMyPlants = props.setMyPlants
+  const dailyTask = props.dailyTask
+  const setDailyTask = props.setDailyTask
   
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState('paper');
@@ -47,7 +49,8 @@ export default function PlantDialog(props) {
       >
         <DialogTitle id="scroll-dialog-title">Add a plant</DialogTitle>
         <DialogContent dividers={scroll === 'paper'}>
-          <PlantDialogList myOptions={myOptions} myPlants={myPlants} setMyOptions={setMyOptions} setMyPlants={setMyPlants}/>
+          <PlantDialogList myOptions={myOptions} myPlants={myPlants} setMyOptions={setMyOptions} setMyPlants={setMyPlants}
+          dailyTask={dailyTask} setDailyTask={setDailyTask}/>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
