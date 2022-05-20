@@ -61,12 +61,23 @@ const card = (props) => {
       />
     <Box sx={{ p: 2, border: '1px solid #83765F', borderBottom: 11, borderColor: '#7C8C64'}}>
         <CardContent>
-          <Typography sx={{ fontSize: 14}} color="text.secondary" gutterBottom>
-            {status}
-          </Typography>
           <Typography style={{ fontWeight: 600 }} sx={{ mb: 1.5 }} color="#7C8C64">
             {name}
           </Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between'}}>
+            <Typography
+            fontFamily='Roboto'
+            fontSize={12}
+            style={{color:'#7C8C64'}} gutterBottom>
+              {Math.round(30 * (1 - progress/100))} days until blossom
+            </Typography>
+            <Typography
+            fontFamily='Roboto'
+            fontSize={12}
+            style={{color:'#7C8C64'}} gutterBottom>
+              Total CO2 absorbed: {0.005 * progress}g
+            </Typography>
+          </Box>
           <div>
            <ProgressBar variant="success" now={progress} label={`${progress}%`}></ProgressBar>
           </div>
