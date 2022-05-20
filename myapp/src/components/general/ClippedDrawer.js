@@ -42,7 +42,6 @@ export default function ClippedDrawer() {
       <CssBaseline />
       <Nav drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} handleOpenToggle={handleOpenToggle}></Nav>
       <Drawer
-        // variant="permanent"
         sx={{
           width: drawerWidth,
           flexShrink: 0,

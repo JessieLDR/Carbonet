@@ -80,7 +80,7 @@ export default function Nav(props) {
     
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
       <AppBar position="relative" 
       style={{backgroundColor: 'white'}}
       position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>

@@ -10,6 +10,7 @@ import DidYouKnowHook from "../hooks/DidYouKnowHook";
 import DailyTaskHook from "../hooks/DailyTasksHook";
 import Grid from "@material-ui/core/Grid";
 import VerticalNavBar from "../general/VerticalNavBar";
+import { Typography } from "@mui/material";
 
 
 const didyouknowsample = {
@@ -40,11 +41,39 @@ const PlantsPage = () => {
                 backgroundColor: "#FCFBF6",
             }}>
             <Box sx={{ width: '66%', minHeight:'600px', maxHeight:'1000px'}}>
-                <PlantList plants={myPlants} setMyPlants={setMyPlants}
-                dailyTask={dailyTask} setDailyTask={setDailyTask}/>
-                <PlantDialog myOptions={myOptions} myPlants={myPlants}
-                setMyOptions={setMyOptions} setMyPlants={setMyPlants}
-                dailyTask={dailyTask} setDailyTask={setDailyTask}/>
+                <Box sx={{flexDirection: 'row'}}>
+                    <Box ml={1}>
+                        <Box>
+                            <Typography
+                            fontFamily='Open Sans'
+                            fontSize={42}
+                            fontWeight='bold'
+                            style={{color:'#7C8C64'}}>
+                                Wellcome Back
+                            </Typography>
+                        </Box>
+                        <Box>
+                            <Typography
+                            fontFamily='Open Sans'
+                            fontSize={24}
+                            fontWeight='regular'
+                            style={{color:'#A3A3A3'}}>
+                                This is where you will keep track of your activities
+                            </Typography>
+                        </Box>
+                    </Box>
+                    <Box>
+
+                    </Box>
+                    <Box >
+                        <PlantList plants={myPlants} setMyPlants={setMyPlants}
+                        dailyTask={dailyTask} setDailyTask={setDailyTask}/>
+                        <PlantDialog myOptions={myOptions} myPlants={myPlants}
+                        setMyOptions={setMyOptions} setMyPlants={setMyPlants}
+                        dailyTask={dailyTask} setDailyTask={setDailyTask}/>
+                    </Box>
+                </Box>
+                
             </Box>
             <Box sx={{ width: '33%', minHeight:'600px', maxHeight:'1000px'}}>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
