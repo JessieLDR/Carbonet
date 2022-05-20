@@ -18,6 +18,7 @@ for (var key in raw_data){
     'status': 'in progress',
     'progress': 0,
     'img_src': raw_data[key]['img'],
+    'daily_task': raw_data[key]['daily task']
   }
   plantList.push(element)
 }

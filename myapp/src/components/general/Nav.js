@@ -77,6 +77,7 @@ export default function Nav(props) {
       let path= `/dashboard`
       navigate(path)
     }
+    
 
   return (
     <Box sx={{ flexGrow: 1 }}>

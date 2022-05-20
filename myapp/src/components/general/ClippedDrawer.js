@@ -13,7 +13,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Nav from './Nav';
-import {BrowserRouter as Router, Routes, Switch, Route, Outlet} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Switch, Route, Outlet, useNavigate} from 'react-router-dom';
 import Landing from '../pages/Landing';
 import CommunityPost from '../pages/CommunityPost';
 import Community from '../pages/Community';
@@ -28,6 +28,13 @@ export default function ClippedDrawer() {
   const [drawerOpen, setDrawerOpen] = React.useState(false)
   const handleOpenToggle = () => {
     setDrawerOpen(!drawerOpen)
+  }
+
+  let navigate = useNavigate()
+  const handleCommunityClick = () => {
+    let path = `/Community`
+    handleOpenToggle()
+    navigate(path)
   }
 
   return (
@@ -46,7 +53,7 @@ export default function ClippedDrawer() {
         <Toolbar />
         <Box sx={{ overflow: 'auto' }}>
           <List>
-            {['Community', 'Landing'].map((text, index) => (
+            {/* {['Community', 'Landing'].map((text, index) => (
               <ListItem key={text} disablePadding>
                 <ListItemButton>
                   <ListItemIcon>
@@ -55,21 +62,17 @@ export default function ClippedDrawer() {
                   <ListItemText primary={text} />
                 </ListItemButton>
               </ListItem>
-            ))}
+            ))} */}
+            <ListItem key={'Community'} disablePadding>
+                <ListItemButton onClick={handleCommunityClick}>
+                  <ListItemIcon>
+                    <MailIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={'Community'} />
+                </ListItemButton>
+              </ListItem>
           </List>
           <Divider />
-          {/* <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List> */}
         </Box>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>

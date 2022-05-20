@@ -21,7 +21,8 @@ for (var key in raw_data){
     'name': key,
     'status': 'in progress',
     'progress': Math.round(20/raw_data[key]['growth period'] * 100),
-    'img_src': raw_data[key]['img']
+    'img_src': raw_data[key]['img'],
+    'daily_task': raw_data[key]['daily task']
   }
   plantList.push(element)
 }
