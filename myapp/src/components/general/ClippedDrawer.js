@@ -36,6 +36,9 @@ export default function ClippedDrawer() {
     handleOpenToggle()
     navigate(path)
   }
+  const handleLandingClick = () => {
+    window.location.href = "https://carbonet-landing.netlify.app"
+  }
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -58,6 +61,14 @@ export default function ClippedDrawer() {
                     <MailIcon />
                   </ListItemIcon>
                   <ListItemText primary={'Community'} />
+                </ListItemButton>
+              </ListItem>
+              <ListItem key={'Landing'} disablePadding>
+                <ListItemButton onClick={handleLandingClick}>
+                  <ListItemIcon>
+                    <InboxIcon />
+                  </ListItemIcon>
+                  <ListItemText primary={'Landing'} />
                 </ListItemButton>
               </ListItem>
           </List>
