@@ -85,6 +85,7 @@
   width: 585px;
   height: 356px;
   top: 800px;
+  left: 0px
 }
 
 .rightRound{
@@ -320,18 +321,21 @@ color: #7C8C64;
 }
 
 /* how it work */
+.m{
+  display: flex;
+  flex-grow: 3;
+  flex-wrap: wrap;
+}
 .title {
   margin-top: 80px;
   margin-bottom: 60px;
-  width: 565px;
-  height: 56px;
   font-family: 'Open Sans';
   font-style: normal;
   text-align: center;
   color: #7C8C64;
   justify-content: center;
   align-items: center;
-  margin-left: 30%;
+  margin: auto;
 }
 
 .title p{
@@ -346,6 +350,7 @@ color: #7C8C64;
   left: -30px;
   top: 348px;
 }
+
 
 .sCard{
   width: 33%;

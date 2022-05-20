@@ -5,9 +5,9 @@ import check from"../images/check.png";
 import Container from '@mui/material/Container'
 
 
-function howItWork(props) {
+function howItWork() {
     return (
-        <div>
+        <div className="m">
             <div className="title">
                 <h2>How it Works</h2>
                 <div><p>Learn more about our features</p></div>
