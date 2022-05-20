@@ -8,6 +8,7 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from "react-router-dom";
 import zIndex from '@mui/material/styles/zIndex';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -140,7 +141,7 @@ export default function Nav(props) {
             fontSize={24}
             style={{color:'#7C8C64'}}
           >
-            Additional Options
+            <MenuIcon />
           </Typography>
         </Toolbar>
       </AppBar>
