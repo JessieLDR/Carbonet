@@ -65,7 +65,7 @@ export default function ClippedDrawer() {
           <Divider />
         </Box>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box component="main" mt={10} sx={{ flexGrow: 1}}>
         <Outlet></Outlet>
         <Routes>  
             <Route path='/' element={<Landing></Landing>}/>
