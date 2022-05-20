@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { ProgressBar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { CardMedia } from '@mui/material';
 
 
 const bull = (
@@ -27,6 +28,7 @@ const card = (props) => {
   const setMyPlants = props.setMyPlants
   const dailyTask = props.dailyTask
   const setDailyTask = props.setDailyTask
+  const image = props.plant['img_src']
 
   function deletePlant() {
     const curPlant = myPlants.filter(element => element.id != id)
@@ -51,6 +53,12 @@ const card = (props) => {
   }
   return (
   <React.Fragment>
+    <CardMedia
+        component="img"
+        alt={name}
+        height="75"
+        image={image}
+      />
     <Box sx={{ p: 2, border: '1px solid #83765F', borderBottom: 11, borderColor: '#7C8C64'}}>
         <CardContent>
           <Typography sx={{ fontSize: 14}} color="text.secondary" gutterBottom>
@@ -72,8 +80,8 @@ const card = (props) => {
 
 export default function OutlinedCard(props) {
   return (
-      <Box sx={{ p: 2, maxHeight:300 }}>
-          <Card variant="outlined">{card(props)}</Card>
+      <Box sx={{ p: 2, maxHeight:325 }}>
+          <Card >{card(props)}</Card>
       </Box>
   );
 }
