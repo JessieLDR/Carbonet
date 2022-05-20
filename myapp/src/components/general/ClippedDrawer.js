@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import AppBar from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
@@ -21,26 +20,33 @@ import Community from '../pages/Community';
 import HowItWorks from '../pages/HowItWork';
 import About from '../pages/About';
 import PlantsPage from '../pages/PlantsPage';
+import { useState } from 'react';
 
 const drawerWidth = 240;
 
 export default function ClippedDrawer() {
+  const [drawerOpen, setDrawerOpen] = React.useState(false)
+  const handleOpenToggle = () => {
+    setDrawerOpen(!drawerOpen)
+  }
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <Nav></Nav>
+      <Nav drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} handleOpenToggle={handleOpenToggle}></Nav>
       <Drawer
-        variant="permanent"
+        // variant="permanent"
         sx={{
           width: drawerWidth,
           flexShrink: 0,
           [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
         }}
+        open={drawerOpen}
       >
         <Toolbar />
         <Box sx={{ overflow: 'auto' }}>
           <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+            {['Community', 'Landing'].map((text, index) => (
               <ListItem key={text} disablePadding>
                 <ListItemButton>
                   <ListItemIcon>
@@ -52,7 +58,7 @@ export default function ClippedDrawer() {
             ))}
           </List>
           <Divider />
-          <List>
+          {/* <List>
             {['All mail', 'Trash', 'Spam'].map((text, index) => (
               <ListItem key={text} disablePadding>
                 <ListItemButton>
@@ -63,7 +69,7 @@ export default function ClippedDrawer() {
                 </ListItemButton>
               </ListItem>
             ))}
-          </List>
+          </List> */}
         </Box>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>

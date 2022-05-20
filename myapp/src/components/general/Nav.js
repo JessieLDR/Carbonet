@@ -8,7 +8,6 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from "react-router-dom";
 import zIndex from '@mui/material/styles/zIndex';
-import { makeStyles } from '@material-ui/core/styles'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -53,6 +52,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Nav(props) {
+  const drawerOpen = props.drawerOpen
+  const setDrawerOpen = props.setDrawerOpen
+  const handleOpenToggle = props.handleOpenToggle
+  
   let navigate = useNavigate()
     const navPost = () => {
         let path = `communityPost`
@@ -127,15 +130,17 @@ export default function Nav(props) {
           >
             About Us
           </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+          <Typography
+            noWrap
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            onClick={handleOpenToggle}
+            fontFamily='Open Sans'
+            fontSize={24}
+            style={{color:'#7C8C64'}}
+          >
+            Additional Options
+          </Typography>
         </Toolbar>
       </AppBar>
     </Box>
