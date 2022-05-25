@@ -49,7 +49,7 @@ const PlantsPage = () => {
                             fontSize={42}
                             fontWeight='bold'
                             style={{color:'#7C8C64'}}>
-                                Wellcome Back
+                                Welcome back
                             </Typography>
                         </Box>
                         <Box>

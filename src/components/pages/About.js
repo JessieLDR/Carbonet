@@ -14,21 +14,25 @@ function About(props){
                     <img className = 'handheart' src={helen} />
                     <h2>Helen Zhao</h2>
                     <p>Product Manager</p>
+                    <p>hzhao4@uw.edu</p>
                 </Box>
                 <Box className="sCard">
                     <img className = 'leaf' src={alec} />
                     <h2>Alec Gao</h2>
                     <p>UX Designer</p>
+                    <p>lgao2@uw.edu</p>
                 </Box>
                 <Box className="sCard">
                     <img className = 'check' src={yudong} />
                     <h2>Yudong Li</h2>
                     <p>Developer</p>
+                    <p>yudonl@uw.edu</p>
                 </Box>
                 <Box className="sCard">
                     <img className = 'check' src={jessica} />
                     <h2>Jessica Liu</h2>
                     <p>Developer</p>
+                    <p>deronl@uw.edu</p>
                 </Box>
         </Box>
         </Box>
